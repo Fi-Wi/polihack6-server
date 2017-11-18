@@ -15,6 +15,8 @@ class CreateTrafficControllersTable extends Migration
     {
         Schema::create('traffic_controllers', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('ip');
             $table->timestamps();
         });
     }

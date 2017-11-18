@@ -15,6 +15,10 @@ class CreateTrafficLightsTable extends Migration
     {
         Schema::create('traffic_lights', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('traffic_controller_id');
+            $table->integer('local_id');
+            $table->float('lat');
+            $table->float('long');
             $table->timestamps();
         });
     }
